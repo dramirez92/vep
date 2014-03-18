@@ -1,0 +1,5 @@
+Create sequence Cus_Code start with 1 increment by 1;
+Create sequence C_Code	start with 1 increment by 1;
+Create sequence L_Code start with 1 increment by 1;
+Create sequence OA_Code start with 1 increment by 1;
+Create sequence ME_Code start with 1 increment by 1;

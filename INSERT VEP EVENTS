@@ -1,0 +1,5 @@
+Insert into COUNTRY values (C_Code.NEXTVAL,'VENEZUELA');
+Insert into LOCAL values (L_Code.NEXTVAL,'VEP EVENTS','1490 Valley Ridge Blvd. Ste 100 - Lewisville','75077',972-859-0576,'VEP.events@hotmail.com','A place where you Could celebrate your events',2);
+Insert into CUSTOMER values (Cus_Code.NEXTVAL,'Jose Alejandro','Suarez Osuna',TO_DATE('01/28/1991','mm/dd/yyyy'),'M',5802129866225,5804144794008,'Av Ppal. La Guairita Sec. Sta Clara, Qta. Johaly, El Cafetal','1061','ingjaso@hotmail.com','jaso280191');
+Insert into OWNER_OR_AGENT values (OA_Code.NEXTVAL,'Pascual','Pellegrino','M',0019728590576,'antpelle@aol.com','1234',1,2);
+Insert into MEETING values (ME_Code.NEXTVAL,TO_DATE('01/15/2015','mm/dd/yyyy'),'15:00:00',1,1,1,2);

@@ -1,0 +1,85 @@
+Create table CUSTOMER
+(
+CUS_Code 				Number(38)		NOT NULL,
+CUS_First_Name			Varchar(90)		NOT NULL,
+CUS_Last_Name			Varchar(90)		NOT NULL,
+CUS_Birthday			Varchar(90)		NOT NULL,
+CUS_Sex					Varchar(2)		NOT NULL,
+CUS_Homer_Phone			Varchar(90)		NOT NULL,
+CUS_Mobil_Phone			Varchar(90)		NOT NULL,
+CUS_Address				Varchar(90)		NOT NULL,
+CUS_Zip_Code			Varchar(90)		NOT NULL,
+CUS_Email				Varchar(90)		NOT NULL,
+CUS_Password			Varchar(90)		NOT NULL,
+
+
+Constraint			pk_customer 		primary key (Cus_Code), 
+Constraint 			check_sex			check(Cus_Sex IN ('M','F'))
+
+);
+
+
+
+create table COUNTRY
+(
+C_Code 					Number(38)			NOT NULL,
+C_Name 					Varchar(90)			NOT NULL,
+
+Constraint				pk_country		 primary key(C_Code)
+
+);
+
+
+
+create table LOCAL	
+(
+L_Code 					Number(38)			NOT NULL,
+L_Name 					Varchar(90)			NOT NULL,
+L_Address				Varchar(90)			NOT NULL,
+L_Zip_Code				Varchar(90)			NOT NULL,
+L_Phone_Number			Varchar(90)			NOT NULL,
+L_Email					Varchar(90)			NOT NULL,
+L_Description			Varchar(90)			NOT NULL,
+L_FK_COUNTRY			Number(38)			NOT NULL,
+
+Constraint 			pk_local		primary key (L_Code)
+
+);
+
+
+
+create table OWNER_OR_AGENT
+(
+OA_Code 				Number(38)				NOT NULL,
+OA_First_Name			Varchar(90)				NOT NULL,
+OA_Last_Name			Varchar(90)				NOT NULL,
+OA_Sex					Varchar(2)				NOT NULL,
+OA_Mobil_Phone			Varchar(90)				NOT NULL,
+OA_Email				Varchar(90)				NOT NULL,
+OA_Password				Varchar(90)				NOT NULL,
+OA_FK_LOCAL				Number(38)				NOT NULL,
+OA_FK_COUNTRY			Number(38)				NOT NULL,
+
+Constraint 	 			pk_owner_or_agent			primary key (OA_Code),
+Constraint		check_sexo  check(OA_Sex IN ('M','F'))
+
+
+);
+
+
+
+create table MEETING
+(
+ME_Code						Number(38)				NOT NULL,
+ME_Date 					Date			 		NOT NULL,
+ME_Time 					Varchar(50)				NOT NULL,
+ME_FK_CUSTOMER				Number(38)				NOT NULL,
+ME_FK_OWNER_OR_AGENT		Number(38)				NOT NULL,
+ME_FK_LOCAL					Number(38)				NOT NULL,
+ME_FK_COUNTRY				Number(38)				NOT NULL,
+
+Constraint 		pk_meeting			primary key(ME_Code),
+Constraint   check_time		check(ME_Time IN ('08:00','09:00','10:00','11:00','12:00','13:00','14:00','15:00','16:00','17:00','18:00','19:00','20:00'))
+
+);
+

@@ -1,0 +1,15 @@
+Drop table COUNTRY Cascade Constraint;
+Drop table OWNER_OR_AGENT Cascade Constraint;
+Drop table CUSTOMER Cascade Constraint;
+Drop table MEETING Cascade Constraint;
+Drop table LOCAL Cascade Constraint;
+
+
+
+
+Drop sequence C_Code;
+Drop sequence Cus_Code;
+Drop sequence L_Code;
+Drop sequence OA_Code;
+Drop sequence ME_Code;
+
